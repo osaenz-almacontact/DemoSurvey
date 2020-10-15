@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+
+    </title>
+    <link href="Assets/CSS/bootstrap.css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/styles.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/Default.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/Downcount.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        /* <![CDATA[ */
+        #menuPrincipal img.icon {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        #menuPrincipal img.separator {
+            border-style: none;
+            display: block;
+        }
+
+        #menuPrincipal img.horizontal-separator {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        #menuPrincipal ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+
+        #menuPrincipal ul.static {
+            padding: 0px 10px 0px 10px;
+        }
+
+        #menuPrincipal ul.dynamic {
+            z-index: 1;
+        }
+
+        #menuPrincipal a {
+            text-decoration: none;
+            white-space: nowrap;
+            display: block;
+        }
+
+        #menuPrincipal a.static {
+            padding: 0px 10px 0px 10px;
+            text-decoration: none;
+        }
+
+        #menuPrincipal a.popout {
+            background-image: url("/WebResource.axd?d=CBWJlp9bA0mqwnlVzVudFv_9Yl-yC-GbemuWKMManvoZfzfQDMXQIT7kY-5sfeA5m_gZVJdTnrCvvEzQril6n1OgiZyT_eVYHiGJ-aVoMmk1&t=637321739980000000");
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 14px;
+        }
+
+        #menuPrincipal a.level1 {
+            text-decoration: none;
+            border-style: none;
+        }
+
+        /* ]]> */
+    </style>
+</head>
+
+<body>
+
+    <form method="post" action="./Encuesta.aspx?idEncuesta=31" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="/wEPDwULLTE1NTI1MjY4MjAPZBYCZg9kFgICAw9kFgwCAg88KwANAgkQFgAWAGQMFCsABgUTMDowLDA6MSwwOjIsMDozLDA6NBQrAAIWBh4EVGV4dAUGSW5pY2lvHgZUYXJnZXQFE34vQ29udGVudC9Ib21lLmFzcHgeBVZhbHVlBQE0ZBQrAAIWBh8ABQlFbmN1ZXN0YXMfAQUtfi9Db250ZW50L01lbnVQcmluY2lwYWwvRW5jdWVzdGEvRGVmYXVsdC5hc3B4HwIFATdkFCsAAhYGHwAFCFJlcG9ydGVzHwEFB05vVGllbmUfAgUBOWQUKwACFgYfAAUVQWRtaW5pc3RyYXIgRW5jdWVzdGFzHwEFOX4vQ29udGVudC9NZW51UHJpbmNpcGFsL0FkbWluaXN0cmFyRW5jdWVzdGFzL0RlZmF1bHQuYXNweB8CBQIxMWQUKwACFgYfAAUTQWRtaW5pc3RyYXIgQ3VlbnRhcx8BBTd+L0NvbnRlbnQvTWVudVByaW5jaXBhbC9DdWVudGFzL0FkbWluaXN0cmFyQ3VlbnRhcy5hc3B4HwIFAjEyZGQCBA9kFgICAQ9kFgICAQ9kFgQCAQ8PFgIfAAUZT1NDQVIgRURVQVJETyBPUkRVWiBTQUVOWmRkAgUPDxYCHwAFDUFETUlOSVNUUkFET1JkZAIGD2QWAgIBDzwrAAkCAA8WAh4NTmV2ZXJFeHBhbmRlZGdkBxAWABYAZGQCCA8PFgIeB1Zpc2libGVoZGQCCg9kFgQCAQ8PFgIfAAUTRmFzZSBBY3R1YWw6RmFzZSAxMGRkAgMPZBYGAgEPDxYCHwAFGkxJREVSQVpHTyAtIEFVVE9FVkFMVUFDSU9OZGQCAw88KwARAwAPFgQeC18hRGF0YUJvdW5kZx4LXyFJdGVtQ291bnQCHGQBEBYAFgAWAAwUKwAEFggeBE5hbWUFAklEHgpJc1JlYWRPbmx5aB4EVHlwZRkrAR4JRGF0YUZpZWxkBQJJRBYIHwcFC0RFU0NSSVBDSU9OHwhoHwkZKwIfCgULREVTQ1JJUENJT04WCB8HBRBUSVBPIERFIFBSRUdVTlRBHwhoHwkZKwIfCgUQVElQTyBERSBQUkVHVU5UQRYIHwcFBkVTVEFETx8IaB8JGSsCHwoFBkVTVEFETxYCZg9kFixmD2QWDGYPDxYE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" />
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['form1'];
+            if (!theForm) {
+                theForm = document.form1;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+//]]>
+        </script>
+
+
+        <script
+            src="/WebResource.axd?d=DWJ8vZfv2FmEzgTszpysEJZKtvXj6R5coR3EXIgfo767_k0vsFwva8H9TrDJcHQ4gy7yQwmGQydqry08zjHe_KbNz9-MIkdjCOt4wq6BZao1&amp;t=637321739980000000"
+            type="text/javascript"></script>
+
+
+        <script
+            src="/WebResource.axd?d=_XajsSssfy5wQyHLZMC7uMN5URUGrujCegCYO1At5LVAez9WanVERaKaDX-8PPfpR0AwCr6SSEYKRmD7kh4dYv2D5VNNuY_rp8donhyXDtA1&amp;t=637321739980000000"
+            type="text/javascript"></script>
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="370AD668" />
+            <input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+            <input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                value="/wEdAEVgp7nqm0ZpHA1ljwllFkgYgdqKgFlCONkM66z1Oi21bObY5CYCWkaxSbzyLa5UNjRC6BktYecFxZlP5NlPlCJjuWBdG/cgv+8BLIkSYRuxWSCi43EtLUr5FDcEUEbJiY9/A9ywEdK1cySbnwhKyQdhkSfA56Q7FA3WZE1OC+W+ghFQODwRxdwvK6VLXOONgsXZvPAGe9dixjFq6LoqkPTO0SnKzeZWFvKcdK9rj9oGI77DRYNZPLYUWV3FbDndHGq9d9yxL8BdwX+ymiPs49xuwDYGDLm7LTBuprV1N/u9jlAlk5ijdx7HQ9hpn3oenKobQ0XMFmRbn8Mq5BBCAjnCSnXVrD1aic+JIQcQtigL0g7m3VUUay2NNYE/4gPmzZzmAhkZ/44IiiiyFrfjWhIDPTR+wFK+NhS3WYfgQ6jG2Cx1yR6PFJaO2rehzBO62MUilFv16N62A0lNSbX5I+2o/ZoHkeE2Q0FiMrkDlmwhoeaxelL0OcVb1yRf9un/IEsUEbF4qXmKkQ0iQBrwfu4EJrnw7u4vak43QtuxqxQ+K+eSiRKpkoCBOCZnAwGGrjB32SoKAPFWsJyvTTd3Ka0wjbI3i7HAGIbK0kI00OZOgQFa4Xc57DFgNl9StZUQOMYrkYTXmJnPis1UiqxFdTiBZCZDXDSlV3AqVVpaAn25FR7s/nXP6Bb009yuN6kW/vHGsKkWX92nVx7LP7qHZkJfm7eltinGqiT3fmtzZWA26SeuqsdWg/+C/xcPYyNvXfAWPqZoXnVOrKzaM4m+Gm1NENXdB/H07pRw1Tg55z38oxeARGxIVBEitH43hyt5fwKDv/bofkMWMUJkPqlXfn6V6s/sh7XN5jOCahrICZtpf26uvSVg2w83c9e+O3RXV1uQv2JMBp572kFEXan8bxIVmZNxUscBCZNDVxSunGt7tGi4Y+rrgAp3nx65CmZuZT7HNQtHYIyZpJsG/so2WOCD2YKLgVJ4wX2JPKdF7dH79KTt0GXhUvxdW0R2vUeIqG8IqAC32gEOvLCGcN2qclas2jCCLsBmCZ6Ydgc0eHTdR5pM+GjdGMAJnbSeYqjGcLowjZX8On65UJEYXJskiH70Xhb9rpP40tlfpm8r+zOtygFXmh7FZsbrFq2BB40lJqgLJToIrud0eiHrHfNkBNmnyXuksyFuGyzV/fMLbdjp7yeeZQ/ORN5+ci5qVUR7AAY5kI0FKvltibAl/7CrHtzuqXujMzdwkLcq6vAa6Mum6et3CNcnaz1mtZNFGYOD8WdPuun154Z6nCu46VuEnxX6JRfM72hCe7vU60BRyyU4Y2yAuGzhGb8PiF0E4MD4JEt7VmQNdFGVmAj0ESavoTPkH47xp7pcgnr/r872KZpTbsVuV5rENwCfbN4yldTo1DW0mWj+qEJN8AxCP6uXiRvmIU3Rnud+o9JNVMZYQ7KBH4ZK5n4d7nmWzDCXoAsU6sNXTftOJNDTMtH4YBeWjWcLI4uYg6ui4YLSZ7DpMhs9GA==" />
+        </div>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+            <a class="navbar-brand" href="#">SUVEY-TOOLS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+                <a href="#menuPrincipal_SkipLink"><img alt=""
+                        src="/WebResource.axd?d=a1o_cDjSxr0emlKhD5g5TzxHunB5oOstPZow3D50_IcvAfD1f0MAZlazif2zjmvQeix3g0zmUOOIutnhK-Tf07vQPPV_LP6AB8bu2HryoIg1&amp;t=637321739980000000"
+                        width="0" height="0" style="border-width:0px;" /></a>
+                <div class="navbar-nav mr-auto" id="menuPrincipal">
+                    <ul class="level1 navbar-nav mr-auto">
+                        <li><a class="level1 nav-link" href="index.html">Inicio</a></li>
+                        <li><a class="level1 nav-link" href="MenuEncuesta.html">Encuestas</a></li>
+                        <li><a class="level1 nav-link" href="AdministradorRespuestas.html">Reportes</a></li>
+                        <li><a class="level1 nav-link" href="AdministrarEncuenta.html">Administrar Encuestas</a></li>
+                        <li><a class="level1 nav-link" href="AdministrarCuentas.html">Administrar Cuentas</a></li>
+                    </ul>
+                </div>
+                <a id="menuPrincipal_SkipLink"></a>
+
+            </div>
+            <div id="pnlUsuario" style="width:400px;">
+
+
+
+                <div class="row">
+                    <div class="col-sm-7">
+                        <strong>
+                            <span id="content_usuario_Usuario2_lbl_usuario" style="color:White;font-size: 12px;">OSCAR
+                                EDUARDO ORDUZ SAENZ</span>
+                        </strong>
+                        <span style="color:White;font-size: 15px;">/</span>
+                        <span class="navbar-text">
+                            <span id="content_usuario_Usuario2_lbl_permiso"
+                                style="color:White;font-size: 12px;">ADMINISTRADOR</span>
+                        </span>
+                    </div>
+                    <div class="col-sm-5">
+                        <p style="margin: 5px 0px 0px 0px; text-align: left">
+                            <strong>
+                                <a id="content_usuario_Usuario2_LinkButton1" class="btn btn-danger"
+                                    href="javascript:__doPostBack(&#39;ctl00$content_usuario$Usuario2$LinkButton1&#39;,&#39;&#39;)">Cerrar
+                                    Sesión</a>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </nav>
+
+        <main role="main">
+            <div class="container">
+                <table style="width: 100%; position: absolute; left: 0px; z-index: 0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td valign="top" style="background-color: White; padding: 5px 5px 5px 0px">
+
+                                    </td>
+
+                                    <td style="padding: 20px 2% 20px 2%; background-color: #E4E5E6; width: 100%">
+                                        <div id="Panel1">
+
+                                            <p
+                                                style="text-align: right; margin: 0px 0px 10px 0px; padding: 0px 20px 0px 0px">
+                                                <strong>
+                                                    <span id="lbl_fase"
+                                                        class="css_color_sub_titulo css_fuente_letra css_tamanio_subtitulos css_border_simple"
+                                                        style="display:inline-block;width:200px;padding: 5px; text-align: center">Fase
+                                                        Actual:Fase 10</span></strong>
+                                            </p>
+
+                                            <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+                                                rel="stylesheet" />
+                                            <style>
+                                                .btn-circle.btn-xl {
+                                                    width: 70px;
+                                                    height: 70px;
+                                                    padding: 10px 16px;
+                                                    border-radius: 55px;
+                                                    font-size: 24px;
+                                                    line-height: 1.33;
+                                                }
+
+                                                .btn-circle {
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    padding: 6px 0px;
+                                                    border-radius: 25px;
+                                                    text-align: center;
+                                                    font-size: 12px;
+                                                    line-height: 1.42857;
+                                                }
+                                            </style>
+                                            <br />
+                                            <br />
+                                            <div class="container-fluid">
+                                                <p style="text-align: left;"
+                                                    class="css_color_titulo css_tamaño_titulo_central">
+                                                    <strong>
+                                                        <span id="content_body_lbl_nombre_encuesta"
+                                                            class="css_fuente_letra">LIDERAZGO - AUTOEVALUACION</span>
+                                                    </strong>
+                                                </p>
+                                                <hr />
+                                                <div class="card">
+                                                    <div>
+                                                        <table class="table table-striped" cellspacing="0" rules="all"
+                                                            border="1" id="content_body_dgrid_Preguntas"
+                                                            style="border-collapse:collapse;">
+                                                            <tr>
+                                                                <th align="center" scope="col">Editar</th>
+                                                                <th align="center" scope="col">Deshabilitar</th>
+                                                                <th align="center" scope="col">Habilitar</th>
+                                                                <th scope="col">DESCRIPCION</th>
+                                                                <th align="center" scope="col">TIPO DE PREGUNTA</th>
+                                                                <th align="center" scope="col">ESTADO</th>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$0&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$0&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$0&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Controlo mis emociones y a&#250;n en estados de alta
+                                                                    tensi&#243;n o estr&#233;s respondo
+                                                                    constructivamente.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$1&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$1&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$1&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Soy oportuno y asertivo en la expresi&#243;n de mis
+                                                                    emociones y reacciones.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$2&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$2&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$2&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Reconozco la importancia de los dem&#225;s y sus
+                                                                    emociones la consecuci&#243;n de las metas de todas
+                                                                    las partes.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$3&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$3&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$3&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Act&#250;o de acuerdo a las normas, pol&#237;ticas y
+                                                                    procedimientos.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$4&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$4&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$4&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Manejo congruencia entre lo que digo y lo que hago.
+                                                                </td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$5&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$5&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$5&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Cumplo lo que prometo.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$6&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$6&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$6&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Permito a mis colaboradores vivir experiencias de
+                                                                    formaci&#243;n y crecimiento laboral (Por ejemplo,
+                                                                    participando en proyectos, haciendo reemplazos,
+                                                                    asign&#225;ndome nuevas responsabilidades, rotando a
+                                                                    otros cargos, etc.).</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$7&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$7&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$7&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Acompa&#241;o en el desarrollo de conocimientos,
+                                                                    habilidades y competencias (comportamientos).</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$8&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$8&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$8&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Motivo e impulso el desarrollo de mis conocimientos,
+                                                                    habilidades y comportamientos.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$9&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$9&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$9&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Establezco metas retadoras y alcanzables que
+                                                                    contribuyen al logro de los resultados.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$10&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$10&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$10&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Basado en hechos y datos, evalu&#243; el
+                                                                    desempe&#241;o de mis colaboradores y tomo
+                                                                    decisiones de acuerdo con los resultados.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$11&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$11&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$11&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Propicio el trabajo en equipo en armon&#237;a.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$12&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$12&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$12&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Basado en hechos y datos, evalu&#243; el
+                                                                    desempe&#241;o de mis colaboradores y tomo
+                                                                    decisiones de acuerdo con los resultados.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$13&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$13&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$13&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Doy reconocimiento, verbal o escrito, cuando mis
+                                                                    colaboradores han realizado un buen trabajo.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$14&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$14&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$14&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Retroalimento a tiempo y de manera suficiente las
+                                                                    personas a mi cargo para que puedan enfocarse en la
+                                                                    consecuci&#243;n de las metas.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$15&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$15&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$15&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Pacto con mi las personas de mi equipo acciones
+                                                                    especificas que ayudan a mejorar su desempe&#241;o
+                                                                    productivo.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$16&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$16&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$16&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Llevo a cabo seguimientos frecuente a las acciones
+                                                                    de mejoramiento acordadas las personas de mi equipo
+                                                                    de trabajo. </td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$17&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$17&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$17&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Yo genero credibilidad.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$18&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$18&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$18&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Inspiro, motivo y energizo a mi equipo de trabajo.
+                                                                </td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Editar$19&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Deshabilitar$19&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                </td>
+                                                                <td align="center"><a class="btn btn-light btn-circle"
+                                                                        href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Habilitar$19&#39;)"><i
+                                                                            class="material-icons"
+                                                                            style="color:#28a745; margin-top:2px">done_all</i></a>
+                                                                </td>
+                                                                <td>Mi equipo de trabajo se siente orgulloso de trabajar
+                                                                    conmigo.</td>
+                                                                <td align="center">ComboBox</td>
+                                                                <td align="center">ACTIVO</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="7">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td><span>1</span></td>
+                                                                            <td><a
+                                                                                    href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Preguntas&#39;,&#39;Page$2&#39;)">2</a>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                    <div
+                                                        style="padding: 2px; margin: 20px 0px 0px 0px; border: 2px solid #A6A6A7; text-align: right;">
+                                                        <p
+                                                            style="font-size: 20px; text-align: right; border: 1px solid #CFCFCF; color: #A6A6A7">
+                                                            <strong>
+                                                                <a id="content_body_LinkButton1"
+                                                                    href="javascript:__doPostBack(&#39;ctl00$content_body$LinkButton1&#39;,&#39;&#39;)"
+                                                                    style="color:#A6A6A7;text-decoration:none;">Adicionar
+                                                                    Pregunta >></a></strong>
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div style="width: 380px; position: fixed; top: 120px; right: 0px;"
+                                                    class="css_fuente_letra">
+
+
+
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+
+
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td style="height: 100%; text-align: center">
+                            <center>
+                                <span id="lbl_Credenciales_HP" class="css_fuente_letra"
+                                    style="display:inline-block;color:White;width:100%;">Copyright © Almacontact
+                                    Company</span>
+                            </center>
+                        </td>
+
+                    </tr>
+                </table>
+
+
+
+
+            </div>
+        </main>
+
+
+
+
+        <script
+            type='text/javascript'>new Sys.WebForms.Menu({ element: 'menuPrincipal', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script>
+        <script type="text/javascript">
+            //<![CDATA[
+
+            theForm.oldSubmit = theForm.submit;
+            theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+            theForm.oldOnSubmit = theForm.onsubmit;
+            theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+        </script>
+    </form>
+
+</body>
+
+</html>

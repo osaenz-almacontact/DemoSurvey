@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+
+    </title>
+    <link href="Assets/CSS/bootstrap.css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/styles.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/Default.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/Downcount.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        /* <![CDATA[ */
+        #menuPrincipal img.icon {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        #menuPrincipal img.separator {
+            border-style: none;
+            display: block;
+        }
+
+        #menuPrincipal img.horizontal-separator {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        #menuPrincipal ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+
+        #menuPrincipal ul.static {
+            padding: 0px 10px 0px 10px;
+        }
+
+        #menuPrincipal ul.dynamic {
+            z-index: 1;
+        }
+
+        #menuPrincipal a {
+            text-decoration: none;
+            white-space: nowrap;
+            display: block;
+        }
+
+        #menuPrincipal a.static {
+            padding: 0px 10px 0px 10px;
+            text-decoration: none;
+        }
+
+        #menuPrincipal a.popout {
+            background-image: url("/WebResource.axd?d=CBWJlp9bA0mqwnlVzVudFv_9Yl-yC-GbemuWKMManvoZfzfQDMXQIT7kY-5sfeA5m_gZVJdTnrCvvEzQril6n1OgiZyT_eVYHiGJ-aVoMmk1&t=637321739980000000");
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 14px;
+        }
+
+        #menuPrincipal a.level1 {
+            text-decoration: none;
+            border-style: none;
+        }
+
+        /* ]]> */
+    </style>
+</head>
+
+<body>
+
+    <form method="post" action="./AdministrarCuentas.aspx" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="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" />
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['form1'];
+            if (!theForm) {
+                theForm = document.form1;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+//]]>
+        </script>
+
+
+        <script
+            src="/WebResource.axd?d=DWJ8vZfv2FmEzgTszpysEJZKtvXj6R5coR3EXIgfo767_k0vsFwva8H9TrDJcHQ4gy7yQwmGQydqry08zjHe_KbNz9-MIkdjCOt4wq6BZao1&amp;t=637321739980000000"
+            type="text/javascript"></script>
+
+
+        <script
+            src="/WebResource.axd?d=_XajsSssfy5wQyHLZMC7uMN5URUGrujCegCYO1At5LVAez9WanVERaKaDX-8PPfpR0AwCr6SSEYKRmD7kh4dYv2D5VNNuY_rp8donhyXDtA1&amp;t=637321739980000000"
+            type="text/javascript"></script>
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="C7D4801E" />
+            <input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+            <input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                value="/wEdACexbzspIR7RI2nQ5MrKyhTIgdqKgFlCONkM66z1Oi21bObY5CYCWkaxSbzyLa5UNjRC6BktYecFxZlP5NlPlCJjuWBdG/cgv+8BLIkSYRuxWSCi43EtLUr5FDcEUEbJiY9/A9ywEdK1cySbnwhKyQdhDClY6aRp2PojubXqogt9LOKyLRBeUJVY4KQ5FhGFGctwOTci8oSeehC5G9jX2ebXjXe8GVxShCK59K1blRodqRJOV/WWrtMcsJ10wnEfkxk2stDbkm6Aio5cjvs9h5EXH7JhRfaVcK9EwK+u9e6yKefL8VQvDaYO2KqT5B3UQCkpgZ0cjle+EH1D9JL1Fv42X9MoKgy8h0fNGgwr92BCGSfuSnPrxZSWQQhYlcGMde6irJML5e8FWW4RwufXPhVwFi6exC6nCnse15STrdeADtanC+hNkUZ8bGGbhe0EbUYM/QUxHhz3g1R999zb8/OSrSVQE1vFSOIjm2ql6N47b5OdHvTkpr1Jby1nf9f0IbhvQdgtayKaYU05qCB53diHQ4bbW8SLXP4VgesEheAL1eQtWJ2tGGNkzL5gTM3/W2LKBb75X9RttNWoUQKg/+cILSfSFEzpPwqVQjkYhq+z5zqjGYISpD/BPrb1nBxDimj3QngOaK2S+v/LMqBm/2QROwkYFKRI05Rk/CrGA7aDV8iO7ZkaTskHVByIjnsVNgIKXDjrXde2Uo9LXdP1a/afS8BQt/WV7pHeD4tkj4gxXwsPhTP8o9XIxZhkyRC26M8BSN+EdWxmGzzjiIK2Xqqehkrmfh3ueZbMMJegCxTqwx0werGJuGg9LnogzaVJVU7uqWklr7tb/l+cmkcXl6ScItG5/5T3gj8LAZ3ocjb/zg==" />
+        </div>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+            <a class="navbar-brand" href="#">SUVEY-TOOLS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+                <a href="#menuPrincipal_SkipLink"><img alt=""
+                        src="/WebResource.axd?d=a1o_cDjSxr0emlKhD5g5TzxHunB5oOstPZow3D50_IcvAfD1f0MAZlazif2zjmvQeix3g0zmUOOIutnhK-Tf07vQPPV_LP6AB8bu2HryoIg1&amp;t=637321739980000000"
+                        width="0" height="0" style="border-width:0px;" /></a>
+                <div class="navbar-nav mr-auto" id="menuPrincipal">
+                    <ul class="level1 navbar-nav mr-auto">
+                        <li><a class="level1 nav-link" href="index.html">Inicio</a></li>
+                        <li><a class="level1 nav-link" href="MenuEncuesta.html">Encuestas</a></li>
+                        <li><a class="level1 nav-link" href="AdministradorRespuestas.html">Reportes</a></li>
+                        <li><a class="level1 nav-link" href="AdministrarEncuenta.html">Administrar Encuestas</a></li>
+                        <li><a class="level1 nav-link" href="AdministrarCuentas.html">Administrar Cuentas</a></li>
+                    </ul>
+                </div>
+                <a id="menuPrincipal_SkipLink"></a>
+
+            </div>
+            <div id="pnlUsuario" style="width:400px;">
+
+
+
+                <div class="row">
+                    <div class="col-sm-7">
+                        <strong>
+                            <span id="content_usuario_Usuario2_lbl_usuario" style="color:White;font-size: 12px;">OSCAR
+                                EDUARDO ORDUZ SAENZ</span>
+                        </strong>
+                        <span style="color:White;font-size: 15px;">/</span>
+                        <span class="navbar-text">
+                            <span id="content_usuario_Usuario2_lbl_permiso"
+                                style="color:White;font-size: 12px;">ADMINISTRADOR</span>
+                        </span>
+                    </div>
+                    <div class="col-sm-5">
+                        <p style="margin: 5px 0px 0px 0px; text-align: left">
+                            <strong>
+                                <a id="content_usuario_Usuario2_LinkButton1" class="btn btn-danger"
+                                    href="javascript:__doPostBack(&#39;ctl00$content_usuario$Usuario2$LinkButton1&#39;,&#39;&#39;)">Cerrar
+                                    Sesión</a>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </nav>
+
+        <main role="main">
+            <div class="container">
+                <table style="width: 100%; position: absolute; left: 0px; z-index: 0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td valign="top" style="background-color: White; padding: 5px 5px 5px 0px">
+
+                                    </td>
+
+                                    <td style="padding: 20px 2% 20px 2%; background-color: #E4E5E6; width: 100%">
+                                        <div id="Panel1">
+
+                                            <p
+                                                style="text-align: right; margin: 0px 0px 10px 0px; padding: 0px 20px 0px 0px">
+                                                <strong>
+                                                    <span id="lbl_fase"
+                                                        class="css_color_sub_titulo css_fuente_letra css_tamanio_subtitulos css_border_simple"
+                                                        style="display:inline-block;width:200px;padding: 5px; text-align: center">Fase
+                                                        Actual:Fase 10</span></strong>
+                                            </p>
+
+                                            <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+                                                rel="stylesheet" />
+                                            <style>
+                                                .btn-circle.btn-xl {
+                                                    width: 70px;
+                                                    height: 70px;
+                                                    padding: 10px 16px;
+                                                    border-radius: 55px;
+                                                    font-size: 24px;
+                                                    line-height: 1.33;
+                                                }
+
+                                                .btn-circle {
+                                                    width: 40px;
+                                                    height: 40px;
+                                                    padding: 6px 0px;
+                                                    border-radius: 25px;
+                                                    text-align: center;
+                                                    font-size: 12px;
+                                                    line-height: 1.42857;
+                                                }
+                                            </style>
+                                            <br />
+                                            <br />
+                                            <div class="container-fluid">
+                                                <p style="text-align: left;"
+                                                    class="css_color_titulo css_tamaño_titulo_central">
+                                                    <strong>
+                                                        <label>Administración de cuentas</label>
+                                                    </strong>
+                                                </p>
+                                                <hr />
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <div class="form-row">
+                                                            <div class="col">
+                                                                <label>Usuario : </label>
+                                                                <input name="ctl00$content_body$txt_filtro_por_usuario"
+                                                                    type="text" id="content_body_txt_filtro_por_usuario"
+                                                                    class="form-control" />
+                                                            </div>
+                                                            <div class="col">
+                                                                <a id="content_body_lnk_btn_filtro" class="btn btn-info"
+                                                                    href="javascript:__doPostBack(&#39;ctl00$content_body$lnk_btn_filtro&#39;,&#39;&#39;)"
+                                                                    style="font-weight:bold;text-decoration:none;text-align: right; margin-top: 30px">Filtrar>></a>
+                                                            </div>
+                                                            <p style="text-align: right; margin: 0px 0px 0px 0px; font-size: 12px"
+                                                                class="css_color_sub_titulo css_bold">
+                                                                Exportar a excel
+                                                                <input type="image"
+                                                                    name="ctl00$content_body$img_btn_exportar_excel"
+                                                                    id="content_body_img_btn_exportar_excel"
+                                                                    src="../../../Resources/Iconos/logo%20excel.png"
+                                                                    style="height:24px;width:24px;vertical-align: middle" />
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="card-body">
+                                                        <div>
+                                                            <table class="table table-striped" cellspacing="0"
+                                                                cellpadding="4" rules="all" border="1"
+                                                                id="content_body_dgrid_Cuentas"
+                                                                style="border-collapse:collapse;">
+                                                                <tr>
+                                                                    <th scope="col">Editar</th>
+                                                                    <th scope="col">Agregar Evaluado</th>
+                                                                    <th scope="col">Desactivar</th>
+                                                                    <th scope="col">USUARIO</th>
+                                                                    <th scope="col">LOGIN</th>
+                                                                    <th scope="col">CONTRASENIA</th>
+                                                                    <th align="center" scope="col">PERMISO</th>
+                                                                    <th align="center" scope="col">ESTADO</th>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Editar$0&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;AgregarISR$0&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#28a745; margin-top:2px">add_task</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Desahabilitar$0&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                    </td>
+                                                                    <td>ADMINISTRADOR</td>
+                                                                    <td>Administrador</td>
+                                                                    <td>Z7AxQ*se</td>
+                                                                    <td align="center">Administrador</td>
+                                                                    <td align="center">ACTIVO</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Editar$1&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;AgregarISR$1&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#28a745; margin-top:2px">add_task</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Desahabilitar$1&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                    </td>
+                                                                    <td>BOTIA SEPULVEDA MARIA ANGELICA</td>
+                                                                    <td>53117739</td>
+                                                                    <td>sv7oByqT</td>
+                                                                    <td align="center">Usuario</td>
+                                                                    <td align="center">ACTIVO</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Editar$2&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;AgregarISR$2&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#28a745; margin-top:2px">add_task</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Desahabilitar$2&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                    </td>
+                                                                    <td>FERNANDEZ MENDOZA BRILLITH ASTRID</td>
+                                                                    <td>1010165553</td>
+                                                                    <td>x55NzsUA</td>
+                                                                    <td align="center">Usuario</td>
+                                                                    <td align="center">ACTIVO</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Editar$3&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;AgregarISR$3&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#28a745; margin-top:2px">add_task</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Desahabilitar$3&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                    </td>
+                                                                    <td>GANTIVAR SUAREZ MARIA VICTORIA</td>
+                                                                    <td>51916266</td>
+                                                                    <td>RNQZqVeL</td>
+                                                                    <td align="center">Usuario</td>
+                                                                    <td align="center">ACTIVO</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Editar$4&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;AgregarISR$4&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#28a745; margin-top:2px">add_task</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Desahabilitar$4&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                    </td>
+                                                                    <td>GONZALEZ RANGEL CARLOS EDUARDO</td>
+                                                                    <td>80415223</td>
+                                                                    <td>S_VneCgk</td>
+                                                                    <td align="center">Usuario</td>
+                                                                    <td align="center">ACTIVO</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Editar$5&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;AgregarISR$5&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#28a745; margin-top:2px">add_task</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Desahabilitar$5&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                    </td>
+                                                                    <td>OSCAR EDUARDO ORDUZ SAENZ</td>
+                                                                    <td>1015443125</td>
+                                                                    <td>5RYOKYoO</td>
+                                                                    <td align="center">Administrador</td>
+                                                                    <td align="center">ACTIVO</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Editar$6&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;AgregarISR$6&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#28a745; margin-top:2px">add_task</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Desahabilitar$6&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                    </td>
+                                                                    <td>OSCAR ORDUZ</td>
+                                                                    <td>10154433125</td>
+                                                                    <td>3O51HiU1</td>
+                                                                    <td align="center">Usuario</td>
+                                                                    <td align="center">ACTIVO</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Editar$7&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;AgregarISR$7&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#28a745; margin-top:2px">add_task</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Desahabilitar$7&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                    </td>
+                                                                    <td>SANDOVAL GOMEZ PAOLA ANDREA</td>
+                                                                    <td>1010198615</td>
+                                                                    <td>R7iMxE9j</td>
+                                                                    <td align="center">Usuario</td>
+                                                                    <td align="center">ACTIVO</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Editar$8&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#d39e00; margin-top:2px">autorenew</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;AgregarISR$8&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#28a745; margin-top:2px">add_task</i></a>
+                                                                    </td>
+                                                                    <td align="center"><a
+                                                                            href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_Cuentas&#39;,&#39;Desahabilitar$8&#39;)"><i
+                                                                                class="material-icons"
+                                                                                style="color:#dc3545; margin-top:2px">highlight_off</i></a>
+                                                                    </td>
+                                                                    <td>ZUBIETA RAMOS CRISTIAN MAURICIO</td>
+                                                                    <td>1006812057</td>
+                                                                    <td>f-evAL*6</td>
+                                                                    <td align="center">Usuario</td>
+                                                                    <td align="center">ACTIVO</td>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                    <div style="text-align: right; margin: 20px 0px 0px 0px"
+                                                        class="css_fuente_letra">
+
+                                                        <p style="text-align: right; margin: 10px 0px 0px 0px">
+                                                            <a id="content_body_LinkButton1"
+                                                                class="css_fuente_letra css_bold css_tamanio_subtitulos"
+                                                                href="javascript:__doPostBack(&#39;ctl00$content_body$LinkButton1&#39;,&#39;&#39;)"
+                                                                style="color:#A6A6A7;font-size:18px;text-decoration:none;text-align: right; padding: 10px">Agregar
+                                                                un solo usuario >></a>
+
+                                                        </p>
+                                                        <hr size="5px" />
+                                                        <div id="content_body_pnl_importar_excel">
+
+                                                            <p style="margin: 0px">
+                                                                <strong>Importar archivo
+                                                                    excel</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                <input type="image" name="ctl00$content_body$Image1"
+                                                                    id="content_body_Image1"
+                                                                    src="../../../Resources/Iconos/logo%20excel.png"
+                                                                    style="height:40px;width:40px;vertical-align: middle" />
+                                                            </p>
+
+
+                                                        </div>
+                                                        <hr size="5px" />
+                                                        <hr size="5px" />
+
+
+
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div style="position: fixed; width: 500px; top: 125px; right: 0px; z-index: 2;"
+                                                class="css_fuente_letra">
+
+                                            </div>
+
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+
+
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td style="height: 100%; text-align: center">
+                            <center>
+                                <span id="lbl_Credenciales_HP" class="css_fuente_letra"
+                                    style="display:inline-block;color:White;width:100%;">Copyright © Almacontact
+                                    Company</span>
+                            </center>
+                        </td>
+
+                    </tr>
+                </table>
+
+
+
+
+            </div>
+        </main>
+
+
+
+
+        <script
+            type='text/javascript'>new Sys.WebForms.Menu({ element: 'menuPrincipal', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script>
+        <script type="text/javascript">
+            //<![CDATA[
+
+            theForm.oldSubmit = theForm.submit;
+            theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+            theForm.oldOnSubmit = theForm.onsubmit;
+            theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+        </script>
+    </form>
+
+</body>
+
+</html>

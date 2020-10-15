@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+
+    </title>
+    <link href="Assets/CSS/bootstrap.css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/styles.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/Default.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/Downcount.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        /* <![CDATA[ */
+        #menuPrincipal img.icon {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        #menuPrincipal img.separator {
+            border-style: none;
+            display: block;
+        }
+
+        #menuPrincipal img.horizontal-separator {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        #menuPrincipal ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+
+        #menuPrincipal ul.static {
+            padding: 0px 10px 0px 10px;
+        }
+
+        #menuPrincipal ul.dynamic {
+            z-index: 1;
+        }
+
+        #menuPrincipal a {
+            text-decoration: none;
+            white-space: nowrap;
+            display: block;
+        }
+
+        #menuPrincipal a.static {
+            padding: 0px 10px 0px 10px;
+            text-decoration: none;
+        }
+
+        #menuPrincipal a.popout {
+            background-image: url("/WebResource.axd?d=CBWJlp9bA0mqwnlVzVudFv_9Yl-yC-GbemuWKMManvoZfzfQDMXQIT7kY-5sfeA5m_gZVJdTnrCvvEzQril6n1OgiZyT_eVYHiGJ-aVoMmk1&t=637321739980000000");
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 14px;
+        }
+
+        #menuPrincipal a.level1 {
+            text-decoration: none;
+            border-style: none;
+        }
+
+        /* ]]> */
+    </style>
+</head>
+
+<body>
+
+    <form method="post" action="./Encuesta.aspx" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="/wEPDwULLTE1NDU5NDc4OTMPZBYCZg9kFgICAw9kFgwCAg88KwANAgkQFgAWAGQMFCsABgUTMDowLDA6MSwwOjIsMDozLDA6NBQrAAIWBh4EVGV4dAUGSW5pY2lvHgZUYXJnZXQFE34vQ29udGVudC9Ib21lLmFzcHgeBVZhbHVlBQE0ZBQrAAIWBh8ABQlFbmN1ZXN0YXMfAQUtfi9Db250ZW50L01lbnVQcmluY2lwYWwvRW5jdWVzdGEvRGVmYXVsdC5hc3B4HwIFATdkFCsAAhYGHwAFCFJlcG9ydGVzHwEFB05vVGllbmUfAgUBOWQUKwACFgYfAAUVQWRtaW5pc3RyYXIgRW5jdWVzdGFzHwEFOX4vQ29udGVudC9NZW51UHJpbmNpcGFsL0FkbWluaXN0cmFyRW5jdWVzdGFzL0RlZmF1bHQuYXNweB8CBQIxMWQUKwACFgYfAAUTQWRtaW5pc3RyYXIgQ3VlbnRhcx8BBTd+L0NvbnRlbnQvTWVudVByaW5jaXBhbC9DdWVudGFzL0FkbWluaXN0cmFyQ3VlbnRhcy5hc3B4HwIFAjEyZGQCBA9kFgICAQ9kFgICAQ9kFgQCAQ8PFgIfAAUZT1NDQVIgRURVQVJETyBPUkRVWiBTQUVOWmRkAgUPDxYCHwAFDUFETUlOSVNUUkFET1JkZAIGD2QWAgIBDzwrAAkCAA8WAh4NTmV2ZXJFeHBhbmRlZGdkBxAWABYAZGQCCA8PFgIeB1Zpc2libGVoZGQCCg9kFgQCAQ8PFgIfAAUTRmFzZSBBY3R1YWw6RmFzZSAxMGRkAgMPZBYMAgEPDxYCHwAFDlZlciByZXNwdWVzdGFzZGQCAw8QDxYIHhRBcHBlbmREYXRhQm91bmRJdGVtc2ceDURhdGFUZXh0RmllbGQFBk5PTUJSRR4ORGF0YVZhbHVlRmllbGQFAklEHgtfIURhdGFCb3VuZGdkEBULDlNlbGVjY2lvbmFyLi4uBkZhc2UgMQZGYXNlIDIGRmFzZSAzBkZhc2UgNAZGYXNlIDUGRmFzZSA2BkZhc2UgNwZGYXNlIDgGRmFzZSA5B0Zhc2UgMTAVCwEwATEBMgEzATQBNQE2ATcBOAE5BDEwMDcUKwMLZ2dnZ2dnZ2dnZ2cWAQIJZAIFDw8WAh8EZ2QWAgIBDxAPFgYfBgUGTk9NQlJFHwcFAklEHwhnZBAVAQlMaWRlcmF6Z28VAQEzFCsDAWcWAWZkAgcPDxYCHwRnZBYCAgEPEGQQFQIHUG9yIElTUgpQb3IgVW5pZGFkFQIJTGlkZXJhemdvCUxpZGVyYXpnbxQrAwJnZxYBZmQCCQ8PFgIfBGdkFgICAQ8QDxYGHwYFBk5PTUJSRR8HBQJJRB8IZ2QQFQEJTElERVJBWkdPFQECMjkUKwMBZxYBZmQCCw8PFgIfBGdkFgICAw88KwARAwAPFgQfCGceC18hSXRlbUNvdW50AgFkARAWABYAFgAMFCsABxYIHgROYW1lBQtCVSBFdmFsdWFkbx4KSXNSZWFkT25seWgeBFR5cGUZKwIeCURhdGFGaWVsZAULQlUgRXZhbHVhZG8WCB8KBRBUaXBvIGRlIGVuY3Vlc3RhHwtoHwwZKwIfDQUQVGlwbyBkZSBlbmN1ZXN0YRYIHwoFCEVuY3Vlc3RhHwtoHwwZKwIfDQUIRW5jdWVzdGEWCB8KBRBQb3JjZW50YWplIFRvdGFsHwtoHwwZKwIfDQUQUG9yY2VudGFqZSBUb3RhbBYIHwoFDmlkVGlwb0VuY3Vlc3RhHwtoHwwZKwEfDQUOaWRUaXBvRW5jdWVzdGEWCB8KBQtJZF9FbmN1ZXN0YR8LaB8MGSsBHw0FC0lkX0VuY3Vlc3RhFggfCgUERmFzZR8LaB8MGSsCHw0FBEZhc2UWAmYPZBYIZg9kFghmDw8WBh4FV2lkdGgbAAAAAACAUUABAAAAHg9Ib3Jpem9udGFsQWxpZ24LKilTeXN0ZW0uV2ViLlVJLldlYkNvbnRyb2xzLkhvcml6b250YWxBbGlnbgIeBF8hU0ICgIIEZGQCBA8PFgYfDhsAAAAAAIBRQAEAAAAfDwsrBAIfEAKAggRkZAIFDw8WAh8EaGRkAgYPDxYCHwRoZGQCAQ9kFhBmDw8WBh8OGwAAAAAAgFFAAQAAAB8PCysEAh8QAoCCBGRkAgEPDxYCHwAFBEFyZWFkZAICDw8WAh8ABQlMaWRlcmF6Z29kZAIDDw8WAh8ABQlMaWRlcmF6Z29kZAIEDw8WCB8ABQM4MiUfDhsAAAAAAIBRQAEAAAAfDwsrBAIfEAKAggRkZAIFDw8WBB8ABQEzHwRoZGQCBg8PFgQfAAUBMB8EaGRkAgcPDxYCHwAFBkZhc2UgOWRkAgIPDxYCHwRoZBYIZg8PFgYfDhsAAAAAAIBRQAEAAAAfDwsrBAIfEAKAggRkZAIEDw8WBh8OGwAAAAAAgFFAAQAAAB8PCysEAh8QAoCCBGRkAgUPDxYCHwRoZGQCBg8PFgIfBGhkZAIDDw8WAh8EaGRkAgwPDxYCHwAFIENvcHlyaWdodCDCqSBBbG1hY29udGFjdCBDb21wYW55ZGQYAgUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFKWN0bDAwJGNvbnRlbnRfYm9keSRpbWdfYnRuX2V4cG9ydGFyX2V4Y2VsBShjdGwwMCRjb250ZW50X2JvZHkkZGdyaWRfcG9uZGVyYWRvX3RvdGFsDzwrAAwBCAIBZBe97g6GoVNJNk0tfxVVewCXVgJ5yZTB+Ju9rkb8YGZl" />
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['form1'];
+            if (!theForm) {
+                theForm = document.form1;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+//]]>
+        </script>
+
+
+        <script
+            src="/WebResource.axd?d=DWJ8vZfv2FmEzgTszpysEJZKtvXj6R5coR3EXIgfo767_k0vsFwva8H9TrDJcHQ4gy7yQwmGQydqry08zjHe_KbNz9-MIkdjCOt4wq6BZao1&amp;t=637321739980000000"
+            type="text/javascript"></script>
+
+
+        <script
+            src="/WebResource.axd?d=_XajsSssfy5wQyHLZMC7uMN5URUGrujCegCYO1At5LVAez9WanVERaKaDX-8PPfpR0AwCr6SSEYKRmD7kh4dYv2D5VNNuY_rp8donhyXDtA1&amp;t=637321739980000000"
+            type="text/javascript"></script>
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3B2AB4A8" />
+            <input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+            <input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+        </div>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+            <a class="navbar-brand" href="#">SUVEY-TOOLS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+                <a href="#menuPrincipal_SkipLink"><img alt=""
+                        src="/WebResource.axd?d=a1o_cDjSxr0emlKhD5g5TzxHunB5oOstPZow3D50_IcvAfD1f0MAZlazif2zjmvQeix3g0zmUOOIutnhK-Tf07vQPPV_LP6AB8bu2HryoIg1&amp;t=637321739980000000"
+                        width="0" height="0" style="border-width:0px;" /></a>
+                <div class="navbar-nav mr-auto" id="menuPrincipal">
+                    <ul class="level1 navbar-nav mr-auto">
+                        <li><a class="level1 nav-link" href="index.html">Inicio</a></li>
+                        <li><a class="level1 nav-link" href="MenuEncuesta.html">Encuestas</a></li>
+                        <li><a class="level1 nav-link" href="AdministradorRespuestas.html">Reportes</a></li>
+                        <li><a class="level1 nav-link" href="AdministrarEncuenta.html">Administrar Encuestas</a></li>
+                        <li><a class="level1 nav-link" href="AdministrarCuentas.html">Administrar Cuentas</a></li>
+                    </ul>
+                </div><a id="menuPrincipal_SkipLink"></a>
+
+            </div>
+            <div id="pnlUsuario" style="width:400px;">
+
+
+
+                <div class="row">
+                    <div class="col-sm-7">
+                        <strong>
+                            <span id="content_usuario_Usuario2_lbl_usuario" style="color:White;font-size: 12px;">OSCAR
+                                EDUARDO ORDUZ SAENZ</span>
+                        </strong>
+                        <span style="color:White;font-size: 15px;">/</span>
+                        <span class="navbar-text">
+                            <span id="content_usuario_Usuario2_lbl_permiso"
+                                style="color:White;font-size: 12px;">ADMINISTRADOR</span>
+                        </span>
+                    </div>
+                    <div class="col-sm-5">
+                        <p style="margin: 5px 0px 0px 0px; text-align: left">
+                            <strong>
+                                <a id="content_usuario_Usuario2_LinkButton1" class="btn btn-danger"
+                                    href="javascript:__doPostBack(&#39;ctl00$content_usuario$Usuario2$LinkButton1&#39;,&#39;&#39;)">Cerrar
+                                    Sesión</a>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </nav>
+
+        <main role="main">
+            <div class="container">
+                <table style="width: 100%; position: absolute; left: 0px; z-index: 0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td valign="top" style="background-color: White; padding: 5px 5px 5px 0px">
+
+                                    </td>
+
+                                    <td style="padding: 20px 2% 20px 2%; background-color: #E4E5E6; width: 100%">
+                                        <div id="Panel1">
+
+                                            <p
+                                                style="text-align: right; margin: 0px 0px 10px 0px; padding: 0px 20px 0px 0px">
+                                                <strong>
+                                                    <span id="lbl_fase"
+                                                        class="css_color_sub_titulo css_fuente_letra css_tamanio_subtitulos css_border_simple"
+                                                        style="display:inline-block;width:200px;padding: 5px; text-align: center">Fase
+                                                        Actual:Fase 10</span></strong>
+                                            </p>
+
+                                            <div class="container-fluid">
+
+                                                <p style="text-align: left;"
+                                                    class="css_color_titulo css_tamaño_titulo_central">
+                                                    <strong>
+                                                        <span id="content_body_lbl_nombre_encuesta"
+                                                            class="css_fuente_letra">Ver respuestas</span></strong>
+                                                </p>
+                                                <hr />
+                                                <div class="form-row">
+                                                    <div class="col">
+                                                        <label>Eliga fase</label>
+                                                        <select name="ctl00$content_body$cmb_fase"
+                                                            onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$content_body$cmb_fase\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                                            id="content_body_cmb_fase" class="form-control">
+                                                            <option value="0">Seleccionar...</option>
+                                                            <option value="1">Fase 1</option>
+                                                            <option value="2">Fase 2</option>
+                                                            <option value="3">Fase 3</option>
+                                                            <option value="4">Fase 4</option>
+                                                            <option value="5">Fase 5</option>
+                                                            <option value="6">Fase 6</option>
+                                                            <option value="7">Fase 7</option>
+                                                            <option value="8">Fase 8</option>
+                                                            <option selected="selected" value="9">Fase 9</option>
+                                                            <option value="1007">Fase 10</option>
+
+                                                        </select>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div id="content_body_pnl_tipo_encuesta">
+
+                                                            <label>Eliga tipo de encuesta</label>
+                                                            <select name="ctl00$content_body$cmb_tipo_encuesta"
+                                                                onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$content_body$cmb_tipo_encuesta\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                                                id="content_body_cmb_tipo_encuesta"
+                                                                class="form-control">
+                                                                <option selected="selected" value="3">Liderazgo</option>
+
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div id="content_body_pnl_filtro">
+
+                                                            <label>Filtrar por:</label>
+                                                            <table id="content_body_rdl_btn_filtro">
+                                                                <tr>
+                                                                    <td><input id="content_body_rdl_btn_filtro_0"
+                                                                            type="radio"
+                                                                            name="ctl00$content_body$rdl_btn_filtro"
+                                                                            value="Liderazgo" checked="checked" /><label
+                                                                            for="content_body_rdl_btn_filtro_0">Por
+                                                                            ISR</label></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><input id="content_body_rdl_btn_filtro_1"
+                                                                            type="radio"
+                                                                            name="ctl00$content_body$rdl_btn_filtro"
+                                                                            value="Liderazgo"
+                                                                            onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$content_body$rdl_btn_filtro$1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label
+                                                                            for="content_body_rdl_btn_filtro_1">Por
+                                                                            Unidad</label></td>
+                                                                </tr>
+                                                            </table>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div id="content_body_pnl_encuesta">
+
+                                                            <label>Eliga una BU</label>
+                                                            <select name="ctl00$content_body$cmb_encuestas"
+                                                                onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$content_body$cmb_encuestas\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                                                id="content_body_cmb_encuestas" class="form-control">
+                                                                <option selected="selected" value="29">LIDERAZGO
+                                                                </option>
+
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div style="width: 100%; padding: 10px; background-color: White;"
+                                                class="css_fuente_letra">
+
+                                                <table style="width: 95%;" cellpadding="0;" cellspacing="0;">
+
+                                                    <tr>
+                                                        <td colspan="2" style="padding: 10px;"
+                                                            class="css_border_grueso">
+
+                                                            <p style="margin: 0px 0px 10px 0px; text-align: left;"
+                                                                class="css_color_titulo">
+                                                            </p>
+
+
+                                                            <div id="content_body_pnl_detalle_respuestas">
+
+
+                                                                <div>
+                                                                    <table style="width: 100%" cellpadding="0"
+                                                                        cellspacing="0">
+                                                                        <tr>
+                                                                            <td
+                                                                                style="border: 2px solid #214023; padding: 8px; text-align: center">
+
+                                                                                <p style="text-align: right; margin: 0px 0px 0px 0px; font-size: 12px"
+                                                                                    class="css_color_sub_titulo css_bold">
+                                                                                    Exportar a excel
+                                                                                    <input type="image"
+                                                                                        name="ctl00$content_body$img_btn_exportar_excel"
+                                                                                        id="content_body_img_btn_exportar_excel"
+                                                                                        src="../../../Resources/Iconos/logo%20excel.png"
+                                                                                        style="height:24px;width:24px;vertical-align: middle" />
+
+                                                                                </p>
+
+                                                                                <div>
+                                                                                    <table cellspacing="0"
+                                                                                        cellpadding="4"
+                                                                                        id="content_body_dgrid_ponderado_total"
+                                                                                        style="color:#333333;width:100%;border-collapse:collapse;">
+                                                                                        <tr
+                                                                                            style="color:White;background-color:#214023;font-size:18px;font-weight:bold;">
+                                                                                            <th align="center"
+                                                                                                scope="col"
+                                                                                                style="width:70px;">Ver
+                                                                                                Detalles</th>
+                                                                                            <th scope="col">BU Evaluado
+                                                                                            </th>
+                                                                                            <th scope="col">Tipo de
+                                                                                                encuesta</th>
+                                                                                            <th scope="col">Encuesta
+                                                                                            </th>
+                                                                                            <th align="center"
+                                                                                                scope="col"
+                                                                                                style="width:70px;">
+                                                                                                Porcentaje Total</th>
+                                                                                            <th scope="col">Fase</th>
+                                                                                        </tr>
+                                                                                        <tr
+                                                                                            style="background-color:#ECFDEF;">
+                                                                                            <td align="center"
+                                                                                                style="width:70px;"><a
+                                                                                                    href="javascript:__doPostBack(&#39;ctl00$content_body$dgrid_ponderado_total&#39;,&#39;VerDetalles$0&#39;)"
+                                                                                                    style="color:#333333;">Select</a>
+                                                                                            </td>
+                                                                                            <td>Area</td>
+                                                                                            <td>Liderazgo</td>
+                                                                                            <td>Liderazgo</td>
+                                                                                            <td align="center"
+                                                                                                style="width:70px;">82%
+                                                                                            </td>
+                                                                                            <td>Fase 9</td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </div>
+
+
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+
+                                                                </div>
+
+
+                                                            </div>
+                                                            <br />
+                                                            <br />
+
+
+                                                        </td>
+                                                    </tr>
+                                                </table>
+
+
+                                            </div>
+
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+
+
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td style="height: 100%; text-align: center">
+                            <center>
+                                <span id="lbl_Credenciales_HP" class="css_fuente_letra"
+                                    style="display:inline-block;color:White;width:100%;">Copyright © Almacontact
+                                    Company</span>
+                            </center>
+                        </td>
+
+                    </tr>
+                </table>
+
+
+
+
+            </div>
+        </main>
+
+
+
+
+        <script
+            type='text/javascript'>new Sys.WebForms.Menu({ element: 'menuPrincipal', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script>
+        <script type="text/javascript">
+            //<![CDATA[
+
+            theForm.oldSubmit = theForm.submit;
+            theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+            theForm.oldOnSubmit = theForm.onsubmit;
+            theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+            theForm.oldOnLoad = window.onload;
+            window.onload = WebForm_RestoreScrollPosition;
+//]]>
+        </script>
+    </form>
+
+</body>
+
+</html>

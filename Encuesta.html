@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+
+    </title>
+    <link href="Assets/CSS/bootstrap.css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/styles.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/Default.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/Downcount.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        /* <![CDATA[ */
+        #menuPrincipal img.icon {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        #menuPrincipal img.separator {
+            border-style: none;
+            display: block;
+        }
+
+        #menuPrincipal img.horizontal-separator {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        #menuPrincipal ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+
+        #menuPrincipal ul.static {
+            padding: 0px 10px 0px 10px;
+        }
+
+        #menuPrincipal ul.dynamic {
+            z-index: 1;
+        }
+
+        #menuPrincipal a {
+            text-decoration: none;
+            white-space: nowrap;
+            display: block;
+        }
+
+        #menuPrincipal a.static {
+            padding: 0px 10px 0px 10px;
+            text-decoration: none;
+        }
+
+        #menuPrincipal a.popout {
+            background-image: url("/WebResource.axd?d=CBWJlp9bA0mqwnlVzVudFv_9Yl-yC-GbemuWKMManvoZfzfQDMXQIT7kY-5sfeA5m_gZVJdTnrCvvEzQril6n1OgiZyT_eVYHiGJ-aVoMmk1&t=637321739980000000");
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 14px;
+        }
+
+        #menuPrincipal a.level1 {
+            text-decoration: none;
+            border-style: none;
+        }
+
+        /* ]]> */
+    </style>
+</head>
+
+<body>
+
+    <form method="post" action="./Encuesta.aspx?idEncuesta=29&amp;&amp;idFase=9" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="/wEPDwUJMjIxODM1MzgyD2QWAmYPZBYCAgMPZBYMAgIPPCsADQIJEBYAFgBkDBQrAAYFEzA6MCwwOjEsMDoyLDA6MywwOjQUKwACFgYeBFRleHQFBkluaWNpbx4GVGFyZ2V0BRN+L0NvbnRlbnQvSG9tZS5hc3B4HgVWYWx1ZQUBNGQUKwACFgYfAAUJRW5jdWVzdGFzHwEFLX4vQ29udGVudC9NZW51UHJpbmNpcGFsL0VuY3Vlc3RhL0RlZmF1bHQuYXNweB8CBQE3ZBQrAAIWBh8ABQhSZXBvcnRlcx8BBQdOb1RpZW5lHwIFATlkFCsAAhYGHwAFFUFkbWluaXN0cmFyIEVuY3Vlc3Rhcx8BBTl+L0NvbnRlbnQvTWVudVByaW5jaXBhbC9BZG1pbmlzdHJhckVuY3Vlc3Rhcy9EZWZhdWx0LmFzcHgfAgUCMTFkFCsAAhYGHwAFE0FkbWluaXN0cmFyIEN1ZW50YXMfAQU3fi9Db250ZW50L01lbnVQcmluY2lwYWwvQ3VlbnRhcy9BZG1pbmlzdHJhckN1ZW50YXMuYXNweB8CBQIxMmRkAgQPZBYCAgEPZBYCAgEPZBYEAgEPDxYCHwAFGU9TQ0FSIEVEVUFSRE8gT1JEVVogU0FFTlpkZAIFDw8WAh8ABQ1BRE1JTklTVFJBRE9SZGQCBg9kFgICAQ88KwAJAgAPFgIeDU5ldmVyRXhwYW5kZWRnZAcQFgAWAGRkAggPDxYCHgdWaXNpYmxlaGRkAgoPZBYEAgEPDxYCHwAFE0Zhc2UgQWN0dWFsOkZhc2UgMTBkZAIDD2QWDAIBDxYCHwRoZAIDDxYCHwRoZAIEDxYCHwRoZAIFDxYCHwRoZAIHDw8WAh8ABQlMSURFUkFaR09kZAIID2QWDAIBDxAPFgYeDURhdGFUZXh0RmllbGQFBk5PTUJSRR4ORGF0YVZhbHVlRmllbGQFAklEHgtfIURhdGFCb3VuZGdkEBUBBkZhc2UgORUBATkUKwMBZ2RkAgMPEA8WBh8FBQZOT01CUkUfBgUCSUQfB2dkEBUCB0JvZ290w6EIU2FiYW5ldGEVAgExATIUKwMCZ2dkZAIFDxAPFgYfBQUGTk9NQlJFHwYFAklEHwdnZBAVCA5BUkVBUyBERSBBUE9ZTw9CQU5DTyBERSBCT0dPVEEFQ0xBUk8SQ09MTUVEQSBGSURVQ0lBUklBDEVORUwgQ09ERU5TQQFHBUxBVEFNB1NBTVNVTkcVCAExATIBMwE0ATUBNgE3ATgUKwMIZ2dnZ2dnZ2cWAWZkAgcPEGRkFgFmZAIJDw8WAh8ABQtFdmFsdWFyIGE6IGRkAgsPEA8WBh8FBQZOT01CUkUfBgUCSUQfB2dkEBUBDENsYXVkaWEgTGVhbBUBBDMwNjkUKwMBZ2RkAgwPDxYCHwAFIENvcHlyaWdodCDCqSBBbG1hY29udGFjdCBDb21wYW55ZGRk0qco/eEJBovHxHPxCVe6chr+VOGkAVlHTwvyw5JavgA=" />
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['form1'];
+            if (!theForm) {
+                theForm = document.form1;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+//]]>
+        </script>
+
+
+        <script
+            src="/WebResource.axd?d=DWJ8vZfv2FmEzgTszpysEJZKtvXj6R5coR3EXIgfo767_k0vsFwva8H9TrDJcHQ4gy7yQwmGQydqry08zjHe_KbNz9-MIkdjCOt4wq6BZao1&amp;t=637321739980000000"
+            type="text/javascript"></script>
+
+
+        <script
+            src="/WebResource.axd?d=_XajsSssfy5wQyHLZMC7uMN5URUGrujCegCYO1At5LVAez9WanVERaKaDX-8PPfpR0AwCr6SSEYKRmD7kh4dYv2D5VNNuY_rp8donhyXDtA1&amp;t=637321739980000000"
+            type="text/javascript"></script>
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E8B9FF94" />
+            <input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+            <input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                value="/wEdAK4BSJHHPYzK5iQY/Ne+gvF8KYHaioBZQjjZDOus9TottWzm2OQmAlpGsUm88i2uVDY0QugZLWHnBcWZT+TZT5QiY7lgXRv3IL/vASyJEmEbsVkgouNxLS1K+RQ3BFBGyYmPfwPcsBHStXMkm58ISskHYTsVjIoc1U4jo9SNGYmauOfIcp2ljUkqF6+9DuN6z8+uT0cferoJ8+E6HkFzNJDK8MQ0AOzq69tB+0COIBZaBs7lspc98QlMjI192rj9klGomjdZJb4UL8XliG23gaIwpwVnMapsD4tJH/Q+DfbSgZGYwQ9up9DzVEttHZBuogDW5MmvfEWDvIKk2Igf+r3a9+IF4/n8xRIwFDmKSUkL6mGXMIIMzlYZhy0UZ2eBMAWqQ8zHqIAUqr2GTpF8ZGDF3+C/KozjnPUNjPhNbd4fmWfM7Krn+Db0Rvmn7Ra6sgSUvMAe5QyjqFbI1fh1MNfFvjKM/c51qNWAEYX1MaD3jJG7VYJf6oeoVwdqqsEgWV+IsMoa6s++peQsQgq+B8OYq2saKHgrWzXE1a+V0RXHUCO3omV/tYUdh1U/62ubF4V1yIomWTRw4UTHtj5AtFa/RNl5Z+hUkipxJYod8su+Mxom79j2wAwDYQ+v5BbeXnLHiDV5fPVDD6vXR7sWQlO2W+v+ywlSUh6chjVblQaJIDR9OeL5+crKbJ1lfMGYQSO/IzVBVA4H+QKQLEbI80MQls1W6eE3DsHOhfdkc+7JCqouYkeB0N9tKJ+B7qGdB0U9tmJ0FJRKcWdns2l+qvfaovbb6vNaMKjO3SeUoK2pkzZ0kizDKtoH2ahnNK3ovlhkt/vz8EC44LWPhEnzSCtAx15MfyAuaWT34qL2uTLZyi5+Tp/qAc35scJtID5OK3/fD73/ayUxagsMlYddSBhGSWcd8xTimUvmpkrUu1Mg+c4RGXjzf73aS4c29GIcVeGqenJkyXcbGYWs0X3IbsKQX55K46LrzHL5WrL6S97u7JqRLt2bqY38EVrLE2HQYCLET7fgvfCoT8wnlNqtwuTReUpmNTXy+pW36uPJODHfllquEp9nQANoNXWY/Qd5DGtMBBBuTwEYIuH1wbAfbktNHA/6Cn6xw8HhIwHFIs7mmY5QW9GSVrQFOGqBTYLqVZaiHhjx11yE+qSNe1otV6bsoAHDudiUeLb1MJOQ+nq6BxMG10AK0oHE7kA5IVdHV/FMEq1ST4Zf54+GKNKj0vHX9Gy1y9nDcdThvyhoVYR2hOuxHxyJpoGDK9a7tJ1/WUR7qmCmS9Wdbx0P6qxJfPZTyHSJ9cq6jYSMpW8EdhIi9R84AXC1xQrlBHho7PZrYi4pI9lQE9H3IVdrVktqbfZEGLGAA6EavSluAp8/frFV3iKCs8t67wfwmMRYoa/DHwhHxIcntYuHXfSpSlA9sQwgWIK9lIJsKzSlMhjVdLE8KYrfvb3zilTJHNs7QsUU/4tBH32tYiaKgb0QmgzIJNQyxYwY0w2xixxkmmJznalNOLLgeyuDTq1Yj+eDXtxoTaae2/iZC86Lrnijl/xNThj62no226hbb9aGMCeUNjyPhPDKBigZhlo1jflf5P+3um1/pbciXLt2Nnk599aXTN//YoKrHStiGhPmOQXIdvXvGsr/ErsBP7OUB+zLY9xUM68ny5spFNK6GuIOihLtUcEUheYxxHfpH+juDRqW1lPIhbte7+2pgjKKp6KIMszvH/QfWyrbE/h2CEb2lP4m74YIgflsvxkbMLm8zcYKxOy3mcpoyRk+wFce2osiucnWWUpYCMStcJyMuUTHpCZBrr846+HiMWfniF24a3y2vB3blrnwuoDuCNGlhwl+Jh1Nh3tR4rQJlHudn68DsCRcBEs2V0a94YYZE077WpPEKdOdJECgBmF3wnm7ZXLnmQTMV09LtMIqpY4rNTTrJg+IccpnzBWfLO+eaQjtyOcCC63KCQ2utYzi6FTStIA4FzNkPCN74Hg7aq38KjO65jHGsMFeEL0Hw+fuY1bB9TTeXJWr0zpscoEsvrBcCod+pCYd3unTGw+6gltJ/fDOMWFxZBoP20p8SJ/nm/IV6jRvBmF8N1CeiAn/6e704mRGQ/A3rLt7zI63B0LGHdSbAI6y6uJ8mOKqRlYRzhjzfnxjugeUaWU/Ai6LVjFY5BRhYXKGmABwVbdufUot3jms8kapBq/OUQha4KELim2T3Gqt5wQqNdq+W8gfA24B72n6D93RlIN01nU18ZE9lgdp52pEq+yMJzul6F386Lkl/0A0WWPOlk1VNk4Z3vsKrPTzX6bb7d7rBdfO9x7cEVXGEiMTrAZjM8W3lb7soPW/7tdYwY6pxAPl4BgEafr+K7RY964STEw1fWufKB2w0Djn88TSM+bGbRbWOEx+4k3kJx/k6wTV/Vopyoz/FDXTy0YhUVRAEwY6ynm4Vz6NbOYeOFbRuZd5rIOw1HvsDIxs4q5fxNgz6Ja3LeFb/8BPhHXdomB7MhixwFBKFaB/jeN/ej7yuQ0jZI9BHGQDPdccX42279zil/cXyfsn9OXeVQqb4TtYLuouZ1I22HgOG/0NrRrVT+XrDhZSw+SQjEckDEzxN441vRs286GN4/gXjRtuJVQpqqtr/Xda+pZNHpim9eGTBYH5KZnwnBwlrq+cXQjI9W9jgaEfUant/DgHy71QTpfPWHH+ELcOvwCQPDCvIAgc8H3Ywn0nnraAsRfKJREgdRqL89txjeGaPKyolq5UgFa1rIYhYpxHDHBES+tMl3MBDO3TU8Zs7juzvvt/18L5HcnuRNz4lR5fauLzULqZdjSbNY6d9xVTHW1htW/o/yWxFXcTWrfKdzk/kUbZgBG66c2ms3+xf9TIUWkfWCSRtuggt3aQxxXk/I5h/ytQrDXH+z2dXvwz3qHIoLvrALomtu0a7kAOIBlWyuLpEVfEwEI3YBmP86VbYP9jHy9UjW8q/9gM2NJbtMkNhUy/XfCZiACn6TLrOghL3MO602kpRMZcI7SerlJhYZjxpzWw1NlVrgJrq+ZHgIq/5wCsvI9TpBI3dWVBgTuXYnXNlrnHsXUucR825OKjavTb51JQitT/KJL5J9Ul1pOyxjyNRBUi3NJIKa77SJGn2orPGDlnZb4eJJ5H20FABMgxPe6WXgrQu2ilwqVOrHL3Cf5t9Mk7tFDYL1lKE/A36PbB1jEQorycYeAutQKdPcU+5X3ub7MykxfHLL2udE1CIwTlky6iTH6l4BR6/3SRZTgXpUydandGwHYeoaltp6zycF2JUG7sv4lwOTgW32h5xLBywCsXEFpfGcI7+HZFku1PQvsPrStnz3wvo5G7hsU8WswJP64MHfD4dVgyJBvqsBYaRESJp6FHiaHQvRC02Jg4eGXJ1ygw5D6zLqgfZb6hYnoUUiSYFfk31Ygo9dsxhzmJ7zvbj1KGniy6aMUmmrJP0qIcIn9y2c4WNH/e1STmXutR7Gjh+u8JUsxQwxDvZIgcdZzlXzyrVO17wZX+eNT3nS67f41dt8EWHdoA/NSsKkKJJJPTcvuLmzERK8qLhFfTiV284ugYiqxR0ylsSMD1tZKLZOxl8Keebtubb7tyMjcUjN6WqHLVDSXaRt5uV3uNyiLWpe/DgEbi7o4nCVqizY+pR5GmLenC9/ZBos/e2feoT12UuT83Of+fVRNz8XYhNuRbi+dpIFWETKv02YdXY+mboCUV9qSEtwrIPMz5ZBWObJrSe45P9HM4Mm9RdDRIEeVy2dilzLI=" />
+        </div>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+            <a class="navbar-brand" href="#">SUVEY-TOOLS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+                <a href="#menuPrincipal_SkipLink"><img alt=""
+                        src="/WebResource.axd?d=a1o_cDjSxr0emlKhD5g5TzxHunB5oOstPZow3D50_IcvAfD1f0MAZlazif2zjmvQeix3g0zmUOOIutnhK-Tf07vQPPV_LP6AB8bu2HryoIg1&amp;t=637321739980000000"
+                        width="0" height="0" style="border-width:0px;" /></a>
+                <div class="navbar-nav mr-auto" id="menuPrincipal">
+                    <ul class="level1 navbar-nav mr-auto">
+                        <li><a class="level1 nav-link" href="index.html">Inicio</a></li>
+                        <li><a class="level1 nav-link" href="MenuEncuesta.html">Encuestas</a></li>
+                        <li><a class="level1 nav-link" href="AdministradorRespuestas.html">Reportes</a></li>
+                        <li><a class="level1 nav-link" href="AdministrarEncuenta.html">Administrar Encuestas</a></li>
+                        <li><a class="level1 nav-link" href="AdministrarCuentas.html">Administrar Cuentas</a></li>
+                    </ul>
+                </div>
+                <a id="menuPrincipal_SkipLink"></a>
+
+            </div>
+            <div id="pnlUsuario" style="width:400px;">
+
+
+
+                <div class="row">
+                    <div class="col-sm-7">
+                        <strong>
+                            <span id="content_usuario_Usuario2_lbl_usuario" style="color:White;font-size: 12px;">OSCAR
+                                EDUARDO ORDUZ SAENZ</span>
+                        </strong>
+                        <span style="color:White;font-size: 15px;">/</span>
+                        <span class="navbar-text">
+                            <span id="content_usuario_Usuario2_lbl_permiso"
+                                style="color:White;font-size: 12px;">ADMINISTRADOR</span>
+                        </span>
+                    </div>
+                    <div class="col-sm-5">
+                        <p style="margin: 5px 0px 0px 0px; text-align: left">
+                            <strong>
+                                <a id="content_usuario_Usuario2_LinkButton1" class="btn btn-danger"
+                                    href="javascript:__doPostBack(&#39;ctl00$content_usuario$Usuario2$LinkButton1&#39;,&#39;&#39;)">Cerrar
+                                    Sesión</a>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </nav>
+
+        <main role="main">
+            <div class="container">
+                <table style="width: 100%; position: absolute; left: 0px; z-index: 0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td valign="top" style="background-color: White; padding: 5px 5px 5px 0px">
+
+                                    </td>
+
+                                    <td style="padding: 20px 2% 20px 2%; background-color: #E4E5E6; width: 100%">
+                                        <div id="Panel1">
+
+                                            <p
+                                                style="text-align: right; margin: 0px 0px 10px 0px; padding: 0px 20px 0px 0px">
+                                                <strong>
+                                                    <span id="lbl_fase"
+                                                        class="css_color_sub_titulo css_fuente_letra css_tamanio_subtitulos css_border_simple"
+                                                        style="display:inline-block;width:200px;padding: 5px; text-align: center">Fase
+                                                        Actual:Fase 10</span></strong>
+                                            </p>
+
+                                            <script src="../../../Scripts/jquery-3.4.1.min.js"></script>
+                                            <script>
+                                                $(document).ready(function () {
+                                                    Horas = 0;
+                                                    Minutos = 30;
+                                                    Segundos = 0;
+                                                    countDown()
+
+                                                    function countDown() {
+                                                        Segundos = Segundos - 1;
+                                                        if (Segundos < 0) {
+                                                            Segundos = 59;
+                                                            Minutos = Minutos - 1;
+                                                        }
+
+                                                        document.getElementById("second").innerHTML = Segundos;
+                                                        if (Minutos < 0) {
+
+                                                            Minutos = 59;
+                                                            Horas = Horas - 1;
+                                                        }
+
+                                                        document.getElementById("minute").innerHTML = Minutos;
+                                                        document.getElementById("hour").innerHTML = Horas;
+
+                                                        if (Horas < 0) {
+
+                                                            //final
+                                                            document.getElementById("second").innerHTML = 0;
+                                                            document.getElementById("minute").innerHTML = 0;
+                                                            document.getElementById("hour").innerHTML = 0;
+                                                        }
+                                                        else {
+                                                            setTimeout(countDown, 1000);
+                                                        }
+
+                                                        if (document.getElementById("second").innerHTML == 0 && document.getElementById("minute").innerHTML == 0 && document.getElementById("hour").innerHTML == 0) {
+                                                            $('#content_body_BtnCierreContador').click();
+                                                        }
+                                                    }
+
+                                                    ////var deadline = new Date("july 30, 2050 15:37:25").getTime();
+                                                    //var deadline = new Date();
+                                                    //var x = setInterval(function () {
+                                                    //    var currentTime = new Date().getTime();
+                                                    //    var t = deadline - currentTime;
+                                                    //    //var days = Math.floor(t / (1000 * 60 * 60 * 24));
+                                                    //    var hours = 0;
+                                                    //    var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+                                                    //    var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                                                    //    //document.getElementById("day").innerHTML = days;
+                                                    //    document.getElementById("hour").innerHTML = hours;
+                                                    //    document.getElementById("minute").innerHTML = minutes;
+                                                    //    document.getElementById("second").innerHTML = seconds;
+                                                    //    if (t < 0) {
+                                                    //        clearInterval(x);
+                                                    //        document.getElementById("time-up").innerHTML = "TIME UP";
+                                                    //        //document.getElementById("day").innerHTML = '0';
+                                                    //        document.getElementById("hour").innerHTML = '0';
+                                                    //        document.getElementById("minute").innerHTML = '0';
+                                                    //        document.getElementById("second").innerHTML = '0';
+
+                                                    //       
+                                                    //    }
+                                                    //}, 1000);
+                                                });
+                                            </script>
+                                            <button onclick="__doPostBack('ctl00$content_body$BtnCierreContador','')"
+                                                id="content_body_BtnCierreContador"></button>
+                                            <br />
+                                            <div class="container-fluid">
+                                                <p style="text-align: left;"
+                                                    class="css_color_titulo css_tamaño_titulo_central">
+                                                    <strong>
+                                                        <label sclass="css_fuente_letra">RECUERDA:</label>
+                                                    </strong>
+                                                </p>
+                                                <hr />
+
+                                                <div id="content_body_DivMensajeLiderazgo">
+                                                    <p class="css_tamanio_subtitulos css_color_sub_titulo"
+                                                        style="margin: 0px 0px 10px 0px; text-align: justify">
+                                                        Teniendo en cuenta tu experiencia en Almacontact con tu líder
+                                                        inmediato, te agradecemos compartir tus impresiones de acuerdo a
+                                                        las siguientes afirmaciones.
+                                                        Recuerda que no existen respuestas buenas o malas, por favor lee
+                                                        atentamente el contenido y señala de forma rápida tu nivel de
+                                                        acuerdo con cada una.
+                                                    </p>
+                                                    <p class="css_color_sub_titulo"
+                                                        style="margin: 0px 0px 40px 0px; text-align: justify; font-size: 20px">
+                                                        <strong>Tus repuestas serán confidenciales.</strong>
+                                                    </p>
+                                                </div>
+
+
+
+                                                <div style="position: fixed; width: 300px; top: 205px; right: 0px; z-index: 2;"
+                                                    class="css_fuente_letra">
+                                                    <div id="content_body_pnl_agregar_isr">
+
+                                                        <div style="width: 100%; background-color: White;"
+                                                            class="card text-white bg-warning">
+                                                            <div class="card-body">
+
+                                                                <div class="timer">
+                                                                    <div>
+                                                                        <span class="hours" id="hour"></span>
+                                                                        <div class="smalltext">Hours</div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span class="minutes" id="minute"></span>
+                                                                        <div class="smalltext">Minutes</div>
+                                                                    </div>
+                                                                    <div>
+                                                                        <span class="seconds" id="second"></span>
+                                                                        <div class="smalltext">Seconds</div>
+                                                                    </div>
+                                                                    <p id="time-up"></p>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="card border-primary">
+                                                    <div class="card-header">
+                                                        <b>
+                                                            <span id="content_body_lbl_nombre_encuesta">LIDERAZGO</span>
+                                                        </b>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        <div id="content_body_pnl_Encuesta">
+
+                                                            <div class="form-row">
+                                                                <div class="col">
+                                                                    <label>Fase</label>
+                                                                    <select name="ctl00$content_body$cmb_fase"
+                                                                        id="content_body_cmb_fase" class="form-control">
+                                                                        <option value="9">Fase 9</option>
+
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label>Site</label>
+                                                                    <select name="ctl00$content_body$cmb_site"
+                                                                        id="content_body_cmb_site" class="form-control">
+                                                                        <option value="1">Bogot&#225;</option>
+                                                                        <option value="2">Sabaneta</option>
+
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label>Operacion</label>
+                                                                    <select name="ctl00$content_body$cmb_operacion"
+                                                                        onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$content_body$cmb_operacion\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                                                        id="content_body_cmb_operacion"
+                                                                        class="form-control">
+                                                                        <option selected="selected" value="1">AREAS DE
+                                                                            APOYO</option>
+                                                                        <option value="2">BANCO DE BOGOTA</option>
+                                                                        <option value="3">CLARO</option>
+                                                                        <option value="4">COLMEDA FIDUCIARIA</option>
+                                                                        <option value="5">ENEL CODENSA</option>
+                                                                        <option value="6">G</option>
+                                                                        <option value="7">LATAM</option>
+                                                                        <option value="8">SAMSUNG</option>
+
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <label>Servicio</label>
+                                                                    <select name="ctl00$content_body$cmb_servicio"
+                                                                        onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$content_body$cmb_servicio\&#39;,\&#39;\&#39;)&#39;, 0)"
+                                                                        id="content_body_cmb_servicio"
+                                                                        class="form-control">
+                                                                        <option selected="selected"
+                                                                            value="(Seleccionar)">(Seleccionar)</option>
+
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col">
+                                                                    <span id="content_body_lbl_evaluado">Evaluar a:
+                                                                    </span>
+                                                                    <select
+                                                                        name="ctl00$content_body$cmb_cagar_combo_evaluado"
+                                                                        id="content_body_cmb_cagar_combo_evaluado"
+                                                                        class="form-control" style="margin-top: 7px">
+                                                                        <option value="3069">Claudia Leal</option>
+
+                                                                    </select>
+                                                                </div>
+
+                                                            </div>
+                                                            <br />
+                                                            <table id="content_body_Table1" class="table">
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_1"
+                                                                            class="css_fuente_letra css_bold">1.Mi líder
+                                                                            Inmediato controla sus emociones, y aún en
+                                                                            estados de alta tensión o estrés responde
+                                                                            constructivamente.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_1"
+                                                                            id="content_body_cmb_1"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2759">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2760">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2761">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2762">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2763">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_2"
+                                                                            class="css_fuente_letra css_bold">2.Mi líder
+                                                                            Inmediato es oportuno y asertivo en la
+                                                                            expresión de sus emociones y reacciones en
+                                                                            diferentes situaciones.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_2"
+                                                                            id="content_body_cmb_2"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2764">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2765">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2766">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2767">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2768">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_3"
+                                                                            class="css_fuente_letra css_bold">3.Mi líder
+                                                                            Inmediato reconoce la importancia de los
+                                                                            demás y sus emociones para el propio
+                                                                            bienestar y la consecución de las metas de
+                                                                            todas las partes.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_3"
+                                                                            id="content_body_cmb_3"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2769">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2770">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2771">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2772">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2773">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_4"
+                                                                            class="css_fuente_letra css_bold">4.Mi líder
+                                                                            inmediato actúa de acuerdo con las normas,
+                                                                            políticas y procedimientos definidos en
+                                                                            Almacontact.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_4"
+                                                                            id="content_body_cmb_4"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2774">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2775">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2776">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2777">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2778">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_5"
+                                                                            class="css_fuente_letra css_bold">5.Mi líder
+                                                                            inmediato maneja congruencia entre lo que
+                                                                            dice y lo que hace.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_5"
+                                                                            id="content_body_cmb_5"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2779">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2780">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2781">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2782">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2783">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_6"
+                                                                            class="css_fuente_letra css_bold">6.Mi líder
+                                                                            inmediato cumple lo que promete cuando las
+                                                                            condiciones del negocio lo permiten.</span>
+                                                                    </td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_6"
+                                                                            id="content_body_cmb_6"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2784">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2785">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2786">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2787">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2788">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_7"
+                                                                            class="css_fuente_letra css_bold">7.Mi líder
+                                                                            inmediato me apoya en las experiencias y
+                                                                            oportunidades de formación y crecimiento
+                                                                            laboral de Almacontact .</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_7"
+                                                                            id="content_body_cmb_7"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2789">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2790">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2791">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2792">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2793">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_8"
+                                                                            class="css_fuente_letra css_bold">8.Mi líder
+                                                                            inmediato me orienta para que mejore mis
+                                                                            conocimientos y habilidades en el
+                                                                            trabajo.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_8"
+                                                                            id="content_body_cmb_8"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2794">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2795">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2796">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2797">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2798">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_9"
+                                                                            class="css_fuente_letra css_bold">9.Mi líder
+                                                                            inmediato me motiva e impulsa en el
+                                                                            desarrollo de mis conocimientos, habilidades
+                                                                            y comportamientos.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_9"
+                                                                            id="content_body_cmb_9"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2799">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2800">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2801">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2802">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2803">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_10"
+                                                                            class="css_fuente_letra css_bold">10.Mi
+                                                                            líder inmediato me establece metas retadoras
+                                                                            y alcanzables que contribuyen al logro de
+                                                                            los resultados.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_10"
+                                                                            id="content_body_cmb_10"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2804">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2805">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2806">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2807">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2808">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_11"
+                                                                            class="css_fuente_letra css_bold">11.Mi
+                                                                            líder inmediato me retroalimenta basado en
+                                                                            hechos y datos y evalúa de manera respetuosa
+                                                                            mi desempeño y toma decisiones de acuerdo
+                                                                            con los resultados.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_11"
+                                                                            id="content_body_cmb_11"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2809">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2810">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2811">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2812">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2813">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_12"
+                                                                            class="css_fuente_letra css_bold">12.Mi
+                                                                            líder inmediato me da reconocimiento, verbal
+                                                                            o escrito, cuando se ha realizado un buen
+                                                                            trabajo.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_12"
+                                                                            id="content_body_cmb_12"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2814">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2815">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2816">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2817">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2818">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_13"
+                                                                            class="css_fuente_letra css_bold">13.Mi
+                                                                            líder inmediato me retroalimenta a tiempo y
+                                                                            de manera suficiente para que pueda
+                                                                            enfocarme en la consecución de mis
+                                                                            metas.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_13"
+                                                                            id="content_body_cmb_13"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2819">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2820">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2821">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2822">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2823">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_14"
+                                                                            class="css_fuente_letra css_bold">14.Mi
+                                                                            líder inmediato pacta conmigo las acciones
+                                                                            especificas necesarias para mejorar mi
+                                                                            desempeño productivo.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_14"
+                                                                            id="content_body_cmb_14"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2824">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2825">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2826">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2827">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2828">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_15"
+                                                                            class="css_fuente_letra css_bold">15.Mi
+                                                                            líder lleva a cabo seguimiento frecuente a
+                                                                            las acciones de mejoramiento acordadas.
+                                                                        </span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_15"
+                                                                            id="content_body_cmb_15"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2834">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2835">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2836">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2837">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2838">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_16"
+                                                                            class="css_fuente_letra css_bold">16.Mi
+                                                                            líder inmediato me genera credibilidad y
+                                                                            confianza.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_16"
+                                                                            id="content_body_cmb_16"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2839">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2840">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2841">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2842">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2843">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_17"
+                                                                            class="css_fuente_letra css_bold">17.Mi
+                                                                            líder inmediato me guía, motiva y
+                                                                            energiza.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_17"
+                                                                            id="content_body_cmb_17"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2844">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2845">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2846">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2847">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2848">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_18"
+                                                                            class="css_fuente_letra css_bold">18.Yo
+                                                                            estoy orgulloso de trabajar con Mi líder
+                                                                            inmediato.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_18"
+                                                                            id="content_body_cmb_18"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2849">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2850">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2851">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2852">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2853">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_19"
+                                                                            class="css_fuente_letra css_bold">19.Mi
+                                                                            líder inmediato define y participa en
+                                                                            estrategias que fomentan que trabajemos en
+                                                                            equipo.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_19"
+                                                                            id="content_body_cmb_19"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2854">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2855">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2856">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2857">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2858">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_20"
+                                                                            class="css_fuente_letra css_bold">20.Mi
+                                                                            líder inmediato desarrolla relaciones de
+                                                                            confianza y respeto que facilitan el trabajo
+                                                                            en equipo y el logro de resultados.</span>
+                                                                    </td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_20"
+                                                                            id="content_body_cmb_20"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2859">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2860">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2861">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2862">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2863">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_21"
+                                                                            class="css_fuente_letra css_bold">21.Mi
+                                                                            líder inmediato escucha nuestras ideas y
+                                                                            sugerencias para la toma de
+                                                                            decisiones.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_21"
+                                                                            id="content_body_cmb_21"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2864">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2865">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2866">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2867">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2868">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_22"
+                                                                            class="css_fuente_letra css_bold">22.Mi
+                                                                            líder inmediato alinea los esfuerzos del
+                                                                            equipo con la visión, misión y estrategia de
+                                                                            Almacontact.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_22"
+                                                                            id="content_body_cmb_22"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2869">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2870">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2871">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2872">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2873">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_23"
+                                                                            class="css_fuente_letra css_bold">23.Mi
+                                                                            líder inmediato involucra a su equipo para
+                                                                            proponer nuevas ideas orientadas a cumplir
+                                                                            la estrategia.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_23"
+                                                                            id="content_body_cmb_23"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2874">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2875">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2876">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2877">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2878">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_24"
+                                                                            class="css_fuente_letra css_bold">24.Mi
+                                                                            líder inmediato tiene la capacidad de
+                                                                            revisar y ajustar el plan de trabajo a las
+                                                                            exigencias del área.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_24"
+                                                                            id="content_body_cmb_24"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2879">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2880">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2881">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2882">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2883">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><span id="content_body_lblP_25"
+                                                                            class="css_fuente_letra css_bold">25.En
+                                                                            general, mi percepción sobre la gestión,
+                                                                            acompañamiento y estilo de relacionamiento
+                                                                            de mi líder o jefe inmediato es
+                                                                            satisfactoria.</span></td>
+                                                                    <td class="css_tamanio_widht_50 css_padmin_top css_border_bottom_simple"
+                                                                        align="left"><select
+                                                                            name="ctl00$content_body$cmb_25"
+                                                                            id="content_body_cmb_25"
+                                                                            class="css_fuente_letra"
+                                                                            style="width:400px;">
+                                                                            <option value="2884">MUY EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2885">ALGO EN DESACUERDO
+                                                                            </option>
+                                                                            <option value="2886">NI DE ACUERDO NI EN
+                                                                                DESACUERDO</option>
+                                                                            <option value="2887">ALGO DE ACUERDO
+                                                                            </option>
+                                                                            <option value="2888">MUY DE ACUERDO</option>
+                                                                            <option selected="selected" value="0">
+                                                                                Seleccione una opci&#243;n</option>
+
+                                                                        </select></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td><span style="color:White;">espacio</span></td>
+                                                                </tr>
+                                                            </table>
+                                                            <p style="margin: 5px 0px 0px 0px; text-align: left;">
+                                                                <input type="submit"
+                                                                    name="ctl00$content_body$btnEnviarFormulario"
+                                                                    value="Enviar" id="content_body_btnEnviarFormulario"
+                                                                    class="btn btn-info" />
+                                                            </p>
+
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+
+
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td style="height: 100%; text-align: center">
+                            <center>
+                                <span id="lbl_Credenciales_HP" class="css_fuente_letra"
+                                    style="display:inline-block;color:White;width:100%;">Copyright © Almacontact
+                                    Company</span>
+                            </center>
+                        </td>
+
+                    </tr>
+                </table>
+
+
+
+
+            </div>
+        </main>
+
+
+
+
+        <script
+            type='text/javascript'>new Sys.WebForms.Menu({ element: 'menuPrincipal', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script>
+        <script type="text/javascript">
+            //<![CDATA[
+
+            theForm.oldSubmit = theForm.submit;
+            theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+            theForm.oldOnSubmit = theForm.onsubmit;
+            theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+//]]>
+        </script>
+    </form>
+
+</body>
+
+</html>

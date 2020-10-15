@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>
+
+    </title>
+    <link href="Assets/CSS/bootstrap.css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/bootstrap.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/CSS/CSS/styles.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/Default.css" type="text/css" rel="stylesheet" />
+    <link href="Assets/Downcount.css" type="text/css" rel="stylesheet" />
+    <style type="text/css">
+        /* <![CDATA[ */
+        #menuPrincipal img.icon {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        #menuPrincipal img.separator {
+            border-style: none;
+            display: block;
+        }
+
+        #menuPrincipal img.horizontal-separator {
+            border-style: none;
+            vertical-align: middle;
+        }
+
+        #menuPrincipal ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: auto;
+        }
+
+        #menuPrincipal ul.static {
+            padding: 0px 10px 0px 10px;
+        }
+
+        #menuPrincipal ul.dynamic {
+            z-index: 1;
+        }
+
+        #menuPrincipal a {
+            text-decoration: none;
+            white-space: nowrap;
+            display: block;
+        }
+
+        #menuPrincipal a.static {
+            padding: 0px 10px 0px 10px;
+            text-decoration: none;
+        }
+
+        #menuPrincipal a.popout {
+            background-image: url("/WebResource.axd?d=CBWJlp9bA0mqwnlVzVudFv_9Yl-yC-GbemuWKMManvoZfzfQDMXQIT7kY-5sfeA5m_gZVJdTnrCvvEzQril6n1OgiZyT_eVYHiGJ-aVoMmk1&t=637321739980000000");
+            background-repeat: no-repeat;
+            background-position: right center;
+            padding-right: 14px;
+        }
+
+        #menuPrincipal a.level1 {
+            text-decoration: none;
+            border-style: none;
+        }
+
+        /* ]]> */
+    </style>
+</head>
+
+<body>
+
+    <form method="post" action="./Home.aspx" id="form1">
+        <div class="aspNetHidden">
+            <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+            <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+                value="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" />
+        </div>
+
+        <script type="text/javascript">
+            //<![CDATA[
+            var theForm = document.forms['form1'];
+            if (!theForm) {
+                theForm = document.form1;
+            }
+            function __doPostBack(eventTarget, eventArgument) {
+                if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+                    theForm.__EVENTTARGET.value = eventTarget;
+                    theForm.__EVENTARGUMENT.value = eventArgument;
+                    theForm.submit();
+                }
+            }
+//]]>
+        </script>
+
+
+        <script
+            src="/WebResource.axd?d=DWJ8vZfv2FmEzgTszpysEJZKtvXj6R5coR3EXIgfo767_k0vsFwva8H9TrDJcHQ4gy7yQwmGQydqry08zjHe_KbNz9-MIkdjCOt4wq6BZao1&amp;t=637321739980000000"
+            type="text/javascript"></script>
+
+
+        <script
+            src="/WebResource.axd?d=_XajsSssfy5wQyHLZMC7uMN5URUGrujCegCYO1At5LVAez9WanVERaKaDX-8PPfpR0AwCr6SSEYKRmD7kh4dYv2D5VNNuY_rp8donhyXDtA1&amp;t=637321739980000000"
+            type="text/javascript"></script>
+        <div class="aspNetHidden">
+
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5E0EC777" />
+            <input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+            <input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="0" />
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION"
+                value="/wEdAAnzOSrsb6aayXHmOtXq2KKvgdqKgFlCONkM66z1Oi21bObY5CYCWkaxSbzyLa5UNjRC6BktYecFxZlP5NlPlCJjuWBdG/cgv+8BLIkSYRuxWSCi43EtLUr5FDcEUEbJiY9/A9ywEdK1cySbnwhKyQdhhkrmfh3ueZbMMJegCxTqwzww4qi3LKlKTg3k9Gg+x8Pxne9J1HGZIRVaQ89kQeXj09bpwxEjiPSDAlyt2zpFog==" />
+        </div>
+
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+
+            <a class="navbar-brand" href="#">SUVEY-TOOLS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+                <a href="#menuPrincipal_SkipLink"><img alt=""
+                        src="/WebResource.axd?d=a1o_cDjSxr0emlKhD5g5TzxHunB5oOstPZow3D50_IcvAfD1f0MAZlazif2zjmvQeix3g0zmUOOIutnhK-Tf07vQPPV_LP6AB8bu2HryoIg1&amp;t=637321739980000000"
+                        width="0" height="0" style="border-width:0px;" /></a>
+                <div class="navbar-nav mr-auto" id="menuPrincipal">
+                    <ul class="level1 navbar-nav mr-auto">
+                        <li><a class="level1 nav-link" href="index.html">Inicio</a></li>
+                        <li><a class="level1 nav-link" href="MenuEncuesta.html">Encuestas</a></li>
+                        <li><a class="level1 nav-link" href="AdministradorRespuestas.html">Reportes</a></li>
+                        <li><a class="level1 nav-link" href="AdministrarEncuenta.html">Administrar Encuestas</a></li>
+                        <li><a class="level1 nav-link" href="AdministrarCuentas.html">Administrar Cuentas</a></li>
+                    </ul>
+                </div>
+                <a id="menuPrincipal_SkipLink"></a>
+
+            </div>
+            <div id="pnlUsuario" style="width:400px;">
+
+
+
+                <div class="row">
+                    <div class="col-sm-7">
+                        <strong>
+                            <span id="content_usuario_Usuario2_lbl_usuario" style="color:White;font-size: 12px;">OSCAR
+                                EDUARDO ORDUZ SAENZ</span>
+                        </strong>
+                        <span style="color:White;font-size: 15px;">/</span>
+                        <span class="navbar-text">
+                            <span id="content_usuario_Usuario2_lbl_permiso"
+                                style="color:White;font-size: 12px;">ADMINISTRADOR</span>
+                        </span>
+                    </div>
+                    <div class="col-sm-5">
+                        <p style="margin: 5px 0px 0px 0px; text-align: left">
+                            <strong>
+                                <a id="content_usuario_Usuario2_LinkButton1" class="btn btn-danger"
+                                    href="javascript:__doPostBack(&#39;ctl00$content_usuario$Usuario2$LinkButton1&#39;,&#39;&#39;)">Cerrar
+                                    Sesión</a>
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </nav>
+
+        <main role="main">
+            <div class="container">
+                <table style="width: 100%; position: absolute; left: 0px; z-index: 0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td>
+                            <table style="width: 100%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+
+                                    </td>
+                                    <td valign="top" style="background-color: White; padding: 5px 5px 5px 0px">
+
+                                    </td>
+
+                                    <td style="padding: 20px 2% 20px 2%; background-color: #E4E5E6; width: 100%">
+                                        <div id="Panel1">
+
+                                            <p
+                                                style="text-align: right; margin: 0px 0px 10px 0px; padding: 0px 20px 0px 0px">
+                                                <strong>
+                                                    <span id="lbl_fase"
+                                                        class="css_color_sub_titulo css_fuente_letra css_tamanio_subtitulos css_border_simple"
+                                                        style="display:inline-block;width:200px;padding: 5px; text-align: center">Fase
+                                                        Actual:Fase 10</span></strong>
+                                            </p>
+
+                                            <br />
+                                            <div class="container-fluid">
+
+                                                <p style="text-align: left;"
+                                                    class="css_color_titulo css_tamaño_titulo_central"><strong>SURVEY
+                                                        TOOLS</strong></p>
+                                                <hr />
+                                                <p style="text-align: left; margin: 0px 0px 30px 0px"
+                                                    class="css_color_sub_titulo css_tamanio_subtitulos">
+                                                    <strong>Bienvenido: </strong>
+                                                    <span id="content_body_Label1"></span>
+                                                </p>
+                                                <div class="card border-secondary">
+
+                                                    <div style="padding: 0px 10px 20px 10px; text-align: justify; margin: 0px 0px 20px 0px"
+                                                        class="css_border_simple">
+
+                                                        <p style="font-size: 17px" class="css_color_sub_titulo">
+                                                            <a style="font-size: 20px; margin-top: 0px"
+                                                                class="css_color_titulo;"><strong>Estimado Colaborador
+                                                                </strong></a>Para Almacontact conocer tu opinión es una
+                                                            prioridad, tus aportes nos permiten comprender los aspectos
+                                                            fuertes e identificar las oportunidades de nuestros
+                                                            procesos. Estas mediciones serán recolectadas de manera
+                                                            anual para valorar nuestra curva de mejora.
+                                                            Esta información es de <strong>carácter confidencial
+                                                            </strong>y tus respuestas serán analizadas en conjunto con
+                                                            la del resto de los colaboradores. <br />
+                                                            Te agradecemos de antemano tu disposición y honestidad.
+                                                        </p>
+
+                                                        <div id="content_body_pnl_encuestas_no_pendientes">
+
+                                                            <p class="css_bold css_tamanio_subtitulos css_tamanio_descripcion css_color_sub_titulo"
+                                                                style="margin: 10px 0px 0px 10px; text-align: center">
+                                                                Gracias por su colaboración, señor usuario no tiene
+                                                                encuestas pendientes por responder.
+                                                            </p>
+
+
+                                                        </div>
+
+
+                                                        <div
+                                                            style="padding: 2px; margin: 20px 0px 0px 0px; border: 2px solid #A6A6A7; text-align: right;">
+                                                            <p style="margin: 0px; text-align: right; color: #A6A6A7"
+                                                                class="css_tamanio_subtitulos">
+                                                                <a id="content_body_LinkButton1"
+                                                                    class="css_fuente_letra"
+                                                                    href="javascript:__doPostBack(&#39;ctl00$content_body$LinkButton1&#39;,&#39;&#39;)"
+                                                                    style="color:#A6A6A7;font-weight:bold;text-decoration:none;">Ver
+                                                                    encuestas por responder >></a>
+                                                            </p>
+                                                        </div>
+                                                        <br />
+                                                        <div id="content_body_pnl_EncuestasXResponder">
+
+                                                            <div class="card border-secondary">
+                                                                <div class="card-header" style="text-align: center">
+                                                                    <b>TUS ENCUESTAS</b>
+                                                                </div>
+                                                                <div class="card-body">
+                                                                    <div>
+                                                                        <table class="table table-bordered"
+                                                                            cellspacing="0" rules="all" border="1"
+                                                                            id="content_body_dgrid_misEncuestas"
+                                                                            style="border-collapse:collapse;">
+                                                                            <tr>
+                                                                                <th scope="col">RESPONDER</th>
+                                                                                <th scope="col">Tipo de encuesta</th>
+                                                                                <th scope="col">Encuesta</th>
+                                                                                <th scope="col">Evaluar a</th>
+                                                                                <th scope="col">Estado actual</th>
+                                                                                <th scope="col">Fase</th>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td class="aspNetDisabled"
+                                                                                    align="center">Ya se respondío</td>
+                                                                                <td>Liderazgo</td>
+                                                                                <td>LIDERAZGO</td>
+                                                                                <td>Pedro Fuentes</td>
+                                                                                <td align="center" style="width:150px;">
+                                                                                    <img title="Respondida"
+                                                                                        src="../Resources/Iconos/Forward.png"
+                                                                                        style="height:40px;width:40px;" />
+                                                                                </td>
+                                                                                <td>Fase 9</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td align="center"><a
+                                                                                        href="Encuesta.html">Responder</a>
+                                                                                </td>
+                                                                                <td>Liderazgo</td>
+                                                                                <td>LIDERAZGO</td>
+                                                                                <td>Claudia Leal</td>
+                                                                                <td align="center" style="width:150px;">
+                                                                                    <img title="Por responder"
+                                                                                        src="../Resources/Iconos/Edit.png"
+                                                                                        style="height:40px;width:40px;" />
+                                                                                </td>
+                                                                                <td>Fase 9</td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                    </div>
+
+
+                                                </div>
+
+                                            </div>
+
+
+
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+                            </table>
+
+
+                        </td>
+
+
+                    </tr>
+                    <tr>
+                        <td style="height: 100%; text-align: center">
+                            <center>
+                                <span id="lbl_Credenciales_HP" class="css_fuente_letra"
+                                    style="display:inline-block;color:White;width:100%;">Copyright © Almacontact
+                                    Company</span>
+                            </center>
+                        </td>
+
+                    </tr>
+                </table>
+
+
+
+
+            </div>
+        </main>
+
+
+
+
+        <script
+            type='text/javascript'>new Sys.WebForms.Menu({ element: 'menuPrincipal', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });</script>
+        <script type="text/javascript">
+            //<![CDATA[
+
+            theForm.oldSubmit = theForm.submit;
+            theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+            theForm.oldOnSubmit = theForm.onsubmit;
+            theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+            theForm.oldOnLoad = window.onload;
+            window.onload = WebForm_RestoreScrollPosition;
+//]]>
+        </script>
+    </form>
+
+</body>
+
+</html>
